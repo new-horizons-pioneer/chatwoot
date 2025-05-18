@@ -1,7 +1,7 @@
 class Internal::ReconcilePlanConfigService
   def perform
     remove_premium_config_reset_warning
-    return if ChatwootHub.pricing_plan != 'community'
+    return if true
 
     create_premium_config_reset_warning if premium_config_reset_required?
 
@@ -9,7 +9,7 @@ class Internal::ReconcilePlanConfigService
     reconcile_premium_features
   end
 
-  private
+  privateА
 
   def config_path
     @config_path ||= Rails.root.join('enterprise/config')
